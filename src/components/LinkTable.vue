@@ -11,12 +11,15 @@
         <Link url="https://drive.google.com" name="google drive"/>
     </tr>
     <tr>
-        <td><b>Class Links</b></td>
+        <td><b>D1</b></td>
         <Link url="https://mercerislandschools.zoom.us/j/95429474860" name="P1"/>
         <Link url="https://mercerislandschools.zoom.us/j/85787280330" name="P3"/>
         <Link url="https://mercerislandschools.zoom.us/j/93305194723?pwd=RjF0a2hDQzlUd3FqTzgwdU5IMDZwZz09" name="P7"/>
+    </tr>
+    <tr>
+        <td><b>D2</b></td>
         <Link url="https://mercerislandschools.zoom.us/j/98281543560" name="P2"/>
-        <Link url="https://mercerislandschools.zoom.us/j/91010712635" name="Islander Hour"/>
+        <Link url="https://mercerislandschools.zoom.us/j/91010712635" name="IslH"/>
         <Link url="https://mercerislandschools.zoom.us/j/96765745509" name="P4"/>
         <Link url="https://mercerislandschools.zoom.us/j/96754655426?pwd=eFVKZzVhYk9TaHVQdHJMKzNMR3piZz09" name="P6"/>
     </tr>
