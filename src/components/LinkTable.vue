@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import Link from './Link.vue'
+import Link from './Link.vue';
 
 export default {
-    name: "LinkTable",
-    components: {Link}
-}
+  name: 'LinkTable',
+  components: { Link },
+};
 </script>

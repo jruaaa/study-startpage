@@ -8,48 +8,47 @@
 
 <script>
 export default {
-    name: 'DateTime',
-    data: function() {
-        return {
-            daysOfWeeK: ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'],
-            monthsInYear: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
-            hours: '',
-            minutes: '',
-            seconds: '',
-            day: '',
-            date: '',
-            month: '',
-            year: ''
-        };
+  name: 'DateTime',
+  data() {
+    return {
+      daysOfWeeK: ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'],
+      monthsInYear: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
+      hours: '',
+      minutes: '',
+      seconds: '',
+      day: '',
+      date: '',
+      month: '',
+      year: '',
+    };
+  },
+  computed: {
+    time() {
+      return `${this.hours}:${this.minutes}:${this.seconds}`;
     },
-    computed: {
-        time: function() {
-            return this.hours + ":" + this.minutes + ":" + this.seconds;
-        }
+  },
+  methods: {
+    // TODO: Pad times
+    createDate() {
+      const date = new Date();
+      this.hours = this.padTime(date.getHours());
+      this.minutes = this.padTime(date.getMinutes());
+      this.seconds = this.padTime(date.getSeconds());
+      this.day = this.daysOfWeeK[date.getDay()];
+      this.date = date.getDate();
+      this.month = this.monthsInYear[date.getMonth()];
+      this.year = date.getFullYear();
     },
-    methods: {
-        //TODO: Pad times
-        createDate: function() {
-            var date = new Date();
-            this.hours = this.padTime(date.getHours());
-            this.minutes = this.padTime(date.getMinutes());
-            this.seconds = this.padTime(date.getSeconds());
-            this.day = this.daysOfWeeK[date.getDay()];
-            this.date = date.getDate();
-            this.month = this.monthsInYear[date.getMonth()];
-            this.year = date.getFullYear();
-        },
-        padTime: function(time) {
-            if (time < 10) {
-                return "0" + time;
-            } else {
-                return time;
-            }
-        }
+    padTime(time) {
+      if (time < 10) {
+        return `0${time}`;
+      }
+      return time;
     },
-    mounted: function () {
-        this.createDate();
-        setInterval(() => { this.createDate() }, 500);
-    }
+  },
+  mounted() {
+    this.createDate();
+    setInterval(() => { this.createDate(); }, 500);
+  },
 };
 </script>

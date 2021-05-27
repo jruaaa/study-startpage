@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: "Link",
-    props: ['url','name']
-}
+  name: 'Link',
+  props: ['url', 'name'],
+};
 </script>
