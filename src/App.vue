@@ -6,8 +6,6 @@
                 <LinkTable class="mt-10" /> 
             </div>
             <div class="self-start ml-20">
-                <Weather />
-                <Calendar />
                 <HelloWorld msg="Search bar placeholder"
             </div>
         </div>
@@ -19,8 +17,6 @@
 import HelloWorld from './components/HelloWorld.vue';
 import DateTime from './components/DateTime.vue';
 import LinkTable from './components/LinkTable.vue';
-import Weather from "./components/Weather.vue";
-import Calendar from "./components/Calendar.vue";
 
 export default {
   name: 'app',
@@ -28,8 +24,6 @@ export default {
     HelloWorld,
     DateTime,
     LinkTable,
-    Weather,
-    Calendar
   },
 };
 </script>
